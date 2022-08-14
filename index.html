@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 onclick="console.log('i am Clicked')">DOM er ajk special event</h1>
+        <button onclick="console.log(7)">Click me</button>
+        <!-- <br> -->
+        <button onclick="console.log(65)">Another button</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor='red'">make lal</button>
+        <!-- <br> -->
+        <button onclick="makeCrimson()">Make crimson</button>
+        <!-- <br> -->
+        <button onclick="makeShada()">Shada</button>
+        <!-- <br> -->
+        <button onclick="makeBlack()">Kala</button>
+        <!-- <br> -->
+        <button onclick="makeBlue()">make blue</button>
+        <!-- <br> -->
+        <button id="make-green" onclick="makeGreen">Make Green</button>
+        <!-- <br> -->
+        <button id="make-purple" onclick="makePurple">Make Purple</button>
+        <br>
+        <button id="make-pink">Make Pink</button>
+        <button id="make-golden">Make Golden</button>
+
+
+
+
+
+        <script src="js/events.js"></script>
+        <script>
+            const pinkButton =document.getElementById('make-pink')
+            pinkButton.addEventListener('click', makePink)
+
+            function makePink(){
+                document.body.style.backgroundColor= 'pink'
+            }
+            const goldButton= document.getElementById('make-golden').addEventListener('click', function (){
+                document.body.style.backgroundColor='goldenrod'
+            })
+        </script>
+    </main>
+</body>
+
+</html>
